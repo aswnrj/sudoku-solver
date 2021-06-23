@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 
 export default (props) => {
+
   const [inputNum, setInputNum] = useState("");
   const [redBorder, setRedBorder] = useState(false);
   function checkLength(event) {
@@ -9,7 +10,9 @@ export default (props) => {
       setInputNum("");
       setRedBorder(true);
     } else {
-      setInputNum(currentInput);
+        setInputNum(currentInput);
+        props.setArrayInd(props.ind, currentInput);
+      setRedBorder(false);
     }
   }
 
@@ -24,10 +27,10 @@ export default (props) => {
       min="1"
       max="9"
       onChange={checkLength}
+      onClick={handleClick}
       value={inputNum}
       id={"cell" + props.ind}
       style={redBorder ? { border: "1px solid red" } : {}}
-      onClick={handleClick}
     />
   );
 };
