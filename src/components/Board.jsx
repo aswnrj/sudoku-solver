@@ -2,6 +2,10 @@ import React from "react";
 import Row from "./Row";
 
 export default () => {
+    
+    function createArray(ind, num) {
+        boardArray[ind/9][ind%9] = num;
+    }
 
   return (
       <table className="board" cellSpacing="0" cellPadding="0" border="0">
