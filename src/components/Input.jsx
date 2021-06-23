@@ -1,23 +1,33 @@
 import React, { useState } from "react";
 
 export default (props) => {
-
   const [inputNum, setInputNum] = useState("");
   const [redBorder, setRedBorder] = useState(false);
-  function checkLength(event) {
+  const i = Math.floor(props.ind / 9);
+  const j = props.ind % 9;
+
+  function handleChange(event) {
     const currentInput = event.target.value;
     if (currentInput > 9 || currentInput < 1) {
-      setInputNum("");
+      props.setArray((prevArray) => {
+        prevArray[i][j] = "";
+        return prevArray;
+      });
+      setInputNum(currentInput);
       setRedBorder(true);
     } else {
-        setInputNum(currentInput);
-        props.setArrayInd(props.ind, currentInput);
+      props.setArray((prevArray) => {
+        prevArray[i][j] = currentInput;
+        return prevArray;
+      });
+      setInputNum(currentInput);
       setRedBorder(false);
     }
+    console.log(props.array);
   }
 
   function handleClick() {
-      setRedBorder(false);
+    setRedBorder(false);
   }
 
   return (
@@ -26,9 +36,9 @@ export default (props) => {
       type="number"
       min="1"
       max="9"
-      onChange={checkLength}
+      onChange={handleChange}
       onClick={handleClick}
-      value={inputNum}
+      value={props.array[i][j]}
       id={"cell" + props.ind}
       style={redBorder ? { border: "1px solid red" } : {}}
     />
