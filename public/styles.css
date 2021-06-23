@@ -1,0 +1,67 @@
+body {
+  background-color: #eae2b6;
+  background-image: url("https://www.transparenttextures.com/patterns/diagonal-striped-brick.png");
+  font-family: "Noto Sans", sans-serif;
+  text-align: center;
+  margin: 0;
+}
+
+.navbar {
+  background-color: #402218;
+  color: #eae2b6;
+  font-size: 2.5rem;
+  font-weight: 800;
+  text-shadow: 0px 2px 2px #000;
+  padding: 20px 40px;
+  box-shadow: 0 5px 5px #000;
+}
+
+.input-box {
+    height: 40px;
+    width: 40px;
+    border: 1px solid;
+    outline: none;
+    text-align: center;
+    font-size: 1.6rem;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input[type=number] {
+  -moz-appearance: textfield;
+}
+
+.board {
+  margin: 150px auto;
+  border: 5px solid;
+  box-shadow: 2px 5px 5px;
+}
+
+#cell27, #cell28, #cell29, #cell30, #cell31, #cell32, #cell33, #cell34, #cell35{
+  border-top: 5px solid;
+}
+
+#cell54, #cell55, #cell56, #cell57, #cell58, #cell59, #cell60, #cell61, #cell62{
+  border-top: 5px solid;
+}
+
+#cell2, #cell11, #cell20, #cell29, #cell38, #cell47, #cell56, #cell65, #cell74 {
+  border-right: 5px solid;
+}
+
+#cell5, #cell14, #cell23, #cell32, #cell41, #cell50, #cell59, #cell68, #cell77 {
+  border-right: 5px solid;
+}
+
+.footer {
+  background-color: #402218;
+  color: #eae2b6;
+  position: fixed;
+  width: 100%;
+  bottom: 0;
+  padding: 5px;
+}
