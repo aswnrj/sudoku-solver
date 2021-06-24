@@ -28,9 +28,9 @@ function App() {
     });
     setTmp(!tmp);
   }
+  
   function restart() {
-    setArray(emptyArray);
-    setTmp(!tmp);
+    window.location.reload();
   }
 
   return (
