@@ -36,7 +36,7 @@ input[type=number] {
 }
 
 .board {
-  margin: 150px auto 100px;
+  margin: 150px auto 80px;
   border: 5px solid #000;
   box-shadow: 2px 5px 5px;
 }
@@ -59,7 +59,7 @@ input[type=number] {
 
 .buttons {
   max-width: 300px;
-  margin: 100px auto;
+  margin: 50px auto 350px;
   position: relative;
 }
 
