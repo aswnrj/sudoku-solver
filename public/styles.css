@@ -37,24 +37,24 @@ input[type=number] {
 
 .board {
   margin: 150px auto 100px;
-  border: 5px solid;
+  border: 5px solid #000;
   box-shadow: 2px 5px 5px;
 }
 
 #cell27, #cell28, #cell29, #cell30, #cell31, #cell32, #cell33, #cell34, #cell35{
-  border-top: 5px solid;
+  border-top: 5px solid #000;
 }
 
 #cell54, #cell55, #cell56, #cell57, #cell58, #cell59, #cell60, #cell61, #cell62{
-  border-top: 5px solid;
+  border-top: 5px solid #000;
 }
 
 #cell2, #cell11, #cell20, #cell29, #cell38, #cell47, #cell56, #cell65, #cell74 {
-  border-right: 5px solid;
+  border-right: 5px solid #000;
 }
 
 #cell5, #cell14, #cell23, #cell32, #cell41, #cell50, #cell59, #cell68, #cell77 {
-  border-right: 5px solid;
+  border-right: 5px solid #000;
 }
 
 .buttons {

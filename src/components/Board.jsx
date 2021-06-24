@@ -3,7 +3,11 @@ import Row from "./Row";
 
 export default (props) => {
   return (
-    <table className="board" cellSpacing="0" cellPadding="0" border="0">
+    <table
+      className="board"
+      cellSpacing="0"
+      cellPadding="0"
+      border="0">
       <tbody>
         <Row setArray={props.setArray} array={props.array} ind={0} />
         <Row setArray={props.setArray} array={props.array} ind={9} />

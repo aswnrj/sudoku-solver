@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState} from "react";
 import Header from "./Header";
 import Footer from "./Footer";
 import Board from "./Board";
@@ -15,13 +15,22 @@ function App() {
     emptyArray[i] = tmp;
   }
   let [array, setArray] = useState(emptyArray);
-
+  const [tmp, setTmp] = useState(false);
   function solve() {
-    setArray(Solve(array));
+    setArray(prevArray => {
+      const solvedArray = Solve(prevArray);
+      if (solvedArray===-1) {
+        alert("This puzzle is incorrect/does not have a solution.");
+        return emptyArray;
+      } else {
+        return solvedArray;
+      }
+    });
+    setTmp(!tmp);
   }
-
   function restart() {
     setArray(emptyArray);
+    setTmp(!tmp);
   }
 
   return (
